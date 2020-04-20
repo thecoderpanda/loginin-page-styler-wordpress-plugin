@@ -14,8 +14,7 @@ define('wlpd_site_url',get_site_url());
 define('wlpd_plugin_url',plugins_url( '/', __FILE__ )); 
 
 function wp_login_page_designer_menu(){
-    add_menu_page('Login Designer', 'Login Designer', 'manage_options', 'login-page-designer', 'wlpd_login_designer_settings_page',plugins_url( 'images/menu_icon.png', __FILE__ ) );
-    add_submenu_page('login-page-designer', 'Featured Plugins', 'Featured Plugins', 'manage_options', 'wp-login-page-designer-featured-plugins' ,'login_page_designer_featured_plugins');
+    add_menu_page('Simple Login Styler', 'Simple Login Styler', 'manage_options', 'login-page-designer', 'wlpd_login_designer_settings_page',plugins_url( 'images/menu_icon.png', __FILE__ ) );
 	add_action( 'admin_init', 'wlpd_login_designer_settings' ); 
 } 
 
@@ -168,7 +167,6 @@ if (get_option('wlpd_login_on_or_off')==1) {
 	add_action('login_head', 'wlpd_add_dynamic_style');
 	include('inc/add-options.php');
 }
-include('inc/featured_plugins.php');
 register_activation_hook( __FILE__, 'wlpd_login_designer_activate' ); //register activation hook
 register_deactivation_hook( __FILE__, 'wlpd_login_designer_deactivate' ); //register deactivation hook 
 add_action('admin_menu', 'wp_login_page_designer_menu'); //add settings admin menu
@@ -186,8 +184,8 @@ add_action( 'admin_enqueue_scripts', 'wlpd_add_color_picker' );//add color picke
 }
 </style>
 <div class='wrap'> 
-	<h1><?php _e('Login Page Designer Options'); ?><a style="text-decoration:none;" href="http://www.thecoderpanda.site/" target="_blank"><span style="color: rgba(10, 154, 62, 1);"> (Upgrade to Pro Version)</span></a></h1>
-	<p class="description"><?php _e('Login page designer provides you to easy way to customize the appearance of the wordPress login page with many options. <a href="https://profiles.wordpress.org/chandrakeshkumar" target="_blank"> click here for more plugins</a> .'); ?></p>
+	<h1><?php _e('Simple Login Styler Options'); ?><a style="text-decoration:none;" href="http://www.thecoderpanda.site/" target="_blank"><span style="color: rgba(10, 154, 62, 1);"> </span></a></h1>
+	<p class="description"><?php _e('Simple Login Styler provides you to easy way to customize the appearance of the wordPress login page with many options.'); ?></p>
 	<?php include('inc/social-media.php'); ?>
 	<?php
 	$active_tab = isset($_GET['tab']) ? $_GET['tab'] : 'display_settings';
@@ -213,7 +211,7 @@ add_action( 'admin_enqueue_scripts', 'wlpd_add_color_picker' );//add color picke
 			<div class="postbox">
 			<h3><?php _e('Display Settings', 'login-page-designer'); ?></h3>
 			<div class="inside">
-				<p><?php _e('Login page designer provides you to easy way to customize the appearance of the wordPress login page with many options.', 'login-page-designer'); ?></p>
+				<p><?php _e('Simple Login Styler provides you to easy way to customize the appearance of the wordPress login page with many options.', 'login-page-designer'); ?></p>
 				
 			<table class="form-table">
 				<tr>
@@ -331,7 +329,7 @@ add_action( 'admin_enqueue_scripts', 'wlpd_add_color_picker' );//add color picke
 			<div class="postbox">
 			<h3><?php _e('Logo Settings', 'login-page-designer'); ?></h3>
 			<div class="inside">
-				<p><?php _e('Login page designer provides you to easy way to customize the appearance of the wordPress login page with many options.', 'login-page-designer'); ?></p>
+				<p><?php _e('Simple Login Styler provides you to easy way to customize the appearance of the wordPress login page with many options.', 'login-page-designer'); ?></p>
 				
 			<table class="form-table">
 			
@@ -400,7 +398,7 @@ add_action( 'admin_enqueue_scripts', 'wlpd_add_color_picker' );//add color picke
 			<div class="postbox">
 			<h3><?php _e('Form Settings', 'login-page-designer'); ?></h3>
 			<div class="inside">
-				<p><?php _e('Login page designer provides you to easy way to customize the appearance of the wordPress login page with many options.', 'login-page-designer'); ?></p>
+				<p><?php _e('Simple Login Styler provides you to easy way to customize the appearance of the wordPress login page with many options.', 'login-page-designer'); ?></p>
 				
 			<table class="form-table">
 			
@@ -489,7 +487,7 @@ add_action( 'admin_enqueue_scripts', 'wlpd_add_color_picker' );//add color picke
 			<div class="postbox">
 			<h3><?php _e('Button Settings', 'login-page-designer'); ?></h3>
 			<div class="inside">
-				<p><?php _e('Login page designer provides you to easy way to customize the appearance of the wordPress login page with many options.', 'login-page-designer'); ?></p>
+				<p><?php _e('simple login styler provides you to easy way to customize the appearance of the wordPress login page with many options.', 'login-page-designer'); ?></p>
 				
 			<table class="form-table">
 		
@@ -572,7 +570,7 @@ add_action( 'admin_enqueue_scripts', 'wlpd_add_color_picker' );//add color picke
 			<div class="postbox">
 			<h3><?php _e('Textbox Settings', 'login-page-designer'); ?></h3>
 			<div class="inside">
-				<p><?php _e('Login page designer provides you to easy way to customize the appearance of the wordPress login page with many options.', 'login-page-designer'); ?></p>
+				<p><?php _e('Simple Login Styler provides you to easy way to customize the appearance of the wordPress login page with many options.', 'login-page-designer'); ?></p>
 				
 			<table class="form-table">
 		
